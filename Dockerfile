@@ -15,6 +15,7 @@ FROM alpine:latest
 WORKDIR /root/
 
 COPY --from=builder /go/src/atsflutter/main .
+COPY atsflutter atsflutter
 # RUN \
 #   mkdir ./static && \
 #   chmod -R +rwx ./static && \
