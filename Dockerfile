@@ -3,7 +3,7 @@ FROM golang:latest AS builder
 RUN mkdir /go/src/atsflutter
 WORKDIR /go/src/atsflutter
 
-COPY mediacenter.go .
+COPY atsechoserver.go .
 COPY go.mod .
 COPY go.sum .
 RUN export GOPATH=/go/src/atsflutter
