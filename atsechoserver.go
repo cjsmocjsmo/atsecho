@@ -8,7 +8,7 @@ import (
 
 func main() {
 	e := echo.New()
-	e.Static("/", "/root/atsflutter")
+	e.Static("/", "atsflutter")
 	e.GET("/status", func(c echo.Context) error {
 		return c.String(http.StatusOK, "UP AND RUNNING")
 	})
