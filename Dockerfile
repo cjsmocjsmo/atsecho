@@ -21,6 +21,6 @@ COPY atsflutter atsflutter
 #   chmod -R +rwx ./static && \
 #   mkdir ./fsData
  
-  
+EXPOSE 1323
 CMD ["./main"]
 STOPSIGNAL SIGINT
