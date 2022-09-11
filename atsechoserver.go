@@ -38,7 +38,7 @@ func main() {
 	})
 	// add middleware and routes
 	// ...
-	if err := e.Start(":8080"); err != http.ErrServerClosed {
+	if err := e.Start(":80"); err != http.ErrServerClosed {
 		e.Logger.Fatal(err)
 	}
   }
