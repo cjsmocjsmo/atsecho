@@ -12,11 +12,20 @@ RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o main /go/src/atsf
 
 
 FROM ubuntu:22.04
+
+RUN \
+    apt-get update && \
+    apt-get -y dist-upgrade && \
+    apt-get -y autoclean && \ 
+    apt-get -y autoremove && \
+    apt-get -y install git systemctl nano 
+	
 WORKDIR /root/
 
 COPY --from=builder /go/src/atsflutter/main .
 COPY atsflutter atsflutter
 COPY atsecho.service /etc/systemd/system/
+
 RUN \
     systemclt enable atsecho && \
     systemctl daemon-reload && \
