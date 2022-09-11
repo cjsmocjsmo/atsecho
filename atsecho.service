@@ -13,7 +13,7 @@ After=multi-user.target
 [Service]
 Type=idle
 WorkingDirectory=/home/porthose_cjsmo_cjsmo/atsecho
-User=porthose_cjsmo_cjsmo
+User=root
 Restart=always
 RestartSec=5
 ExecStart=/home/porthose_cjsmo_cjsmo/atsecho/atsecho
