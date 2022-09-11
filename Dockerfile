@@ -11,15 +11,16 @@ RUN go get -v /go/src/atsflutter
 RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o main /go/src/atsflutter
 
 
-FROM alpine:latest
+FROM ubuntu:2204
 WORKDIR /root/
 
 COPY --from=builder /go/src/atsflutter/main .
 COPY atsflutter atsflutter
-# RUN \
-#   mkdir ./static && \
-#   chmod -R +rwx ./static && \
-#   mkdir ./fsData
+COPY atsecho.service /etc/systemd/system/
+RUN \
+  systemctl stop atsecho && \
+  systemclt enable atsecho && \
+  systemctl start atsecho
  
 EXPOSE 1323
 CMD ["./main"]
