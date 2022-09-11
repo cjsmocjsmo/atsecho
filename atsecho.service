@@ -12,11 +12,11 @@ After=multi-user.target
 
 [Service]
 Type=idle
-WorkingDirectory=/home/porthose_cjsmo_cjsmo/atsecho
+WorkingDirectory=/home/porthose_cjsmo_cjsmo/root
 User=root
 Restart=always
 RestartSec=5
-ExecStart=/home/porthose_cjsmo_cjsmo/atsecho/atsecho
+ExecStart=/home/porthose_cjsmo_cjsmo/root/atsecho
 
 [Install]
 WantedBy=multi-user.target

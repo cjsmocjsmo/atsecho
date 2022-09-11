@@ -11,17 +11,18 @@ RUN go get -v /go/src/atsflutter
 RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o main /go/src/atsflutter
 
 
-FROM ubuntu:2204
+FROM ubuntu:22.04
 WORKDIR /root/
 
 COPY --from=builder /go/src/atsflutter/main .
 COPY atsflutter atsflutter
 COPY atsecho.service /etc/systemd/system/
 RUN \
-  systemctl stop atsecho && \
-  systemclt enable atsecho && \
-  systemctl start atsecho
- 
-EXPOSE 1323
+    systemclt enable atsecho && \
+    systemctl daemon-reload && \
+    systemctl start atsecho
+
+
+EXPOSE 80
 CMD ["./main"]
 STOPSIGNAL SIGINT
