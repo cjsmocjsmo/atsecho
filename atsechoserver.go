@@ -19,7 +19,7 @@ func main() {
 	e.Use(middleware.Logger())
 	e.Static("/", "atsflutter")
 
-	e.GET("/", func(c echo.Context) error {
+	e.GET("/status", func(c echo.Context) error {
 		return c.HTML(http.StatusOK, `
 			<h1>Welcome to Echo!</h1>
 			<h3>TLS certificates automatically :_) installed from Let's Encrypt :)</h3>
