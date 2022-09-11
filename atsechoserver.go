@@ -15,8 +15,7 @@ func main() {
 	e.Static("/", "atsflutter")
 	e.GET("/status", func(c echo.Context) error {
 		return c.HTML(http.StatusOK, `
-			<h1>Welcome to Echo!</h1>
-			<h3>TLS certificates automatically :_) installed from Let's Encrypt :)</h3>
+			<h1>ATSECHO IS UP AND RUNNING</h1>
 		`)
 	})
 
