@@ -27,7 +27,7 @@ COPY atsflutter atsflutter
 COPY atsecho.service /etc/systemd/system/
 
 RUN \
-    systemclt enable atsecho && \
+    systemctl enable atsecho && \
     systemctl daemon-reload && \
     systemctl start atsecho
 
