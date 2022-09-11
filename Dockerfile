@@ -17,19 +17,19 @@ RUN \
     apt-get update && \
     apt-get -y dist-upgrade && \
     apt-get -y autoclean && \ 
-    apt-get -y autoremove && \
-    apt-get -y install git systemctl nano 
+    apt-get -y autoremove
+    # apt-get -y install git systemctl nano 
 	
 WORKDIR /root/
 
 COPY --from=builder /go/src/atsflutter/main .
 COPY atsflutter atsflutter
-COPY atsecho.service /etc/systemd/system/
+# COPY atsecho.service /etc/systemd/system/
 
-RUN \
-    systemctl enable atsecho && \
-    systemctl daemon-reload && \
-    systemctl start atsecho
+# RUN \
+#     systemctl enable atsecho && \
+#     systemctl daemon-reload && \
+#     systemctl start atsecho
 
 
 EXPOSE 80
