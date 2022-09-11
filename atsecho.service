@@ -17,7 +17,7 @@ WorkingDirectory=/root
 User=root
 Restart=always
 RestartSec=5
-ExecStart=/root/atsecho
+ExecStart=/root/main
 #ExecStart=/home/porthose_cjsmo_cjsmo/root/atsecho
 
 [Install]
