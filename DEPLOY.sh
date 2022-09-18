@@ -26,7 +26,7 @@ cd $HOME/atsecho;
 
 docker build -t cjsmocjsmo/atsflutteradmin2:0.0.3 .;
 
-docker push cjsmocjsmo/atsflutteradmin2:0.0.3;
+# docker push cjsmocjsmo/atsflutteradmin2:0.0.3;
 
 
 
