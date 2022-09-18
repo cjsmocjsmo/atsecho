@@ -14,7 +14,7 @@ import (
 // 	e.Use(middleware.CORS())
 // 	e.Use(middleware.Recover())
 // 	e.Use(middleware.Logger())
-// 	e.Static("/", "atsflutter")
+// 	e.Static("/", "atsflutteradmin")
 // 	e.GET("/status", func(c echo.Context) error {
 // 		return c.HTML(http.StatusOK, `
 // 			<h1>ATSECHO IS UP AND RUNNING</h1>
@@ -30,7 +30,7 @@ func main() {
 	e.Use(middleware.CORS())
 	e.Use(middleware.Recover())
 	e.Use(middleware.Logger())
-	e.Static("/", "atsflutter")
+	e.Static("/", "atsflutteradmin")
 	e.GET("/status", func(c echo.Context) error {
 		return c.HTML(http.StatusOK, `
 			<h1>ATSECHO IS UP AND RUNNING</h1>
