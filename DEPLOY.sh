@@ -20,9 +20,9 @@ cp -pvr $HOME/atsflutteradmin/atsflutteradmin/webDeploy/images $HOME/atsecho/ats
 
 cp -pvr $HOME/atsflutteradmin/atsflutteradmin/webDeploy/video $HOME/atsecho/atsflutteradmin/;
 
-cp -pvr $HOME/ats/atsflutteradmin/build/web/* $HOME/ats/atsecho/atsflutteradmin/;
+cp -pvr $HOME/atsflutteradmin/build/web/* $HOME/atsecho/atsflutteradmin/;
 
-cd /$HOME/ats/atsecho;
+cd $HOME/atsecho;
 
 docker build -t cjsmocjsmo/atsflutteradmin2:0.0.3;
 
