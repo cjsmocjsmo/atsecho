@@ -1,8 +1,6 @@
 #!/bin/sh
 
-rm -rf $HOME/atsflutteradmin;
 
-git clone https://github.com/cjsmocjsmo/atsflutteradmin;
 
 cd $HOME/atsflutteradmin;
 
