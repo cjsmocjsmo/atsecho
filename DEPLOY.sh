@@ -1,32 +1,26 @@
 #!/bin/sh
 
-rm -rf $HOME/atsDeployments/atsflutterAdminWebDeploy/assets;
+rm -rf $HOME/atsflutteradmin;
 
-rm -rf $HOME/atsDeployments/atsflutterAdminWebDeploy/canvaskit;
+git clone https://github.com/cjsmocjsmo/atsflutteradmin;
 
-rm -rf $HOME/atsDeployments/atsflutterAdminWebDeploy/images;
-
-rm -rf $HOME/atsDeployments/atsflutterAdminWebDeploy/video;
-
-rm -rf $HOME/atsDeployments/atsflutterAdminWebDeploy/icons;
-
-rm -rf $HOME/atsDeployments/atsflutterAdminWebDeploy/*.json;
-
-rm -rf $HOME/atsDeployments/atsflutterAdminWebDeploy/*.js;
-
-rm -rf $HOME/atsDeployments/atsflutterAdminWebDeploy/*.html;
-
-rm -rf $HOME/atsDeployments/atsflutterAdminWebDeploy/*.png;
-
-cp -pvr $HOME/ats/atsflutterImageContainer/images $HOME/atsDeployments/atsflutterAdminWebDeploy/;
-
-cp -pvr $HOME/ats/atsflutterImageContainer/video $HOME/atsDeployments/atsflutterAdprintminWebDeploy/;
-
-cd $HOME/ats/atsflutteradmin;
+cd $HOME/atsflutteradmin;
 
 flutter clean && flutter build web;
 
 cd;
+
+rm -rf $HOME/atsecho;
+
+git clone https://github.com/cjsmocjsmo/atsecho;
+
+rm -rf $HOME/atsecho/atsflutteradmin;
+
+mkdir $HOME/atsecho/atsflutteradmin;
+
+cp -pvr $HOME/atsflutteradmin/atsflutteradmin/webDeploy/images $HOME/atsecho/atsflutteradmin/;
+
+cp -pvr $HOME/atsflutteradmin/atsflutteradmin/webDeploy/video $HOME/atsecho/atsflutteradmin/;
 
 mv -v $HOME/ats/atsflutteradmin/build/web/* $HOME/ats/atsecho/atsflutteradmin/;
 
