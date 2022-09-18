@@ -1,16 +1,14 @@
 #!/bin/sh
 
+rm -rf $HOME/atsflutteradmin;
 
+git clone https://github.com/cjsmocjsmo/atsflutteradmin;
 
 cd $HOME/atsflutteradmin;
 
 flutter clean && flutter build web;
 
 cd;
-
-rm -rf $HOME/atsecho;
-
-git clone https://github.com/cjsmocjsmo/atsecho;
 
 rm -rf $HOME/atsecho/atsflutteradmin;
 
