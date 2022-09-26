@@ -24,9 +24,9 @@ cp -pvr $HOME/atsflutteradmin/build/web/* $HOME/atsecho/atsflutteradmin/;
 
 cd $HOME/atsecho;
 
-docker build -t cjsmocjsmo/atsflutteradmin2:0.0.3 .;
+docker build -t cjsmocjsmo/atsflutteradmin2:0.0.4 .;
 
-# docker push cjsmocjsmo/atsflutteradmin2:0.0.3;
+docker push cjsmocjsmo/atsflutteradmin2:0.0.4;
 
 
 
